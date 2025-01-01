@@ -19,8 +19,8 @@ window.wow.init({
 });
 
 // ==== Token Chart
-const charts = document.querySelectorAll('#chart');
-if(charts.length) {
+const charts1 = document.querySelectorAll('#chart1');
+if(charts1.length) {
   let options = {
     series: [73, 55, 38, 20],
     chart: {
@@ -49,9 +49,78 @@ if(charts.length) {
     ],
   };
   
-  const chart = new ApexCharts(document.querySelector("#chart"), options);
+  const chart = new ApexCharts(document.querySelector("#chart1"), options);
   chart.render();
 }
+
+const charts2 = document.querySelectorAll('#chart2');
+if(charts2.length) {
+  let options = {
+    series: [73, 55, 38, 20],
+    chart: {
+      type: "donut",
+      width: 400,
+    },
+    colors: ["#2347B9", "#3363FF", "#8BA6FF", "#8696CA"],
+    legend: {
+      show: false,
+    },
+    stroke: {
+      show: false,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+  
+  const chart = new ApexCharts(document.querySelector("#chart2"), options);
+  chart.render();
+}
+
+const charts3 = document.querySelectorAll('#chart3');
+if(charts3.length) {
+  let options = {
+    series: [73, 55, 38, 20],
+    chart: {
+      type: "donut",
+      width: 400,
+    },
+    colors: ["#2347B9", "#3363FF", "#8BA6FF", "#8696CA"],
+    legend: {
+      show: false,
+    },
+    stroke: {
+      show: false,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+  
+  const chart = new ApexCharts(document.querySelector("#chart3"), options);
+  chart.render();
+}
+
 
 // ==== darkToggler
 const darkTogglerCheckbox = document.querySelector('#darkToggler');
